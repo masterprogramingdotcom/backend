@@ -1,0 +1,154 @@
+/**
+Theme Name: eduvanti
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: eduvanti
+Template: astra
+*/
+
+p{ margin-bottom: 15px; }
+.country-box .elementor-image-box-title{ padding: 10px 0px; }
+.offer-box .elementor-image-box-title{ padding: 17px 0px; }
+a{ color: var( --e-global-color-accent ); }
+a:hover, a:focus{ color: var( --e-global-color-text ); }
+a:focus{ outline: none; }
+ul{ margin-bottom: 15px; }
+
+/*header*/
+.uber-shortcode-col, .uber-shortcode-col .elementor-widget-wrap, .uber-shortcode{ position: unset; }
+.uber-shortcode .ubermenu{ text-align: right; background: transparent; border: none;}
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-item-level-0 > .ubermenu-target{ border: none!important; color: var( --e-global-color-primary ); font-size: 14px; text-transform: none!important; font-weight: 600;}
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-item-level-0:hover > .ubermenu-target, .uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-item-level-0.ubermenu-active > .ubermenu-target {background: transparent; color: var( --e-global-color-accent ); }
+.uber-shortcode .ubermenu-skin-black-white-2.ubermenu-horizontal .ubermenu-item-level-0.ubermenu-active > .ubermenu-submenu-drop{ margin-top: 26px; }
+.uber-shortcode .ubermenu-skin-black-white-2.ubermenu-horizontal .ubermenu-item-level-0 > .ubermenu-submenu-drop {border-top: 1px solid #e0e0e0; }
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-tab-content-panel {background: #fff; }
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-item-header > .ubermenu-target {font-weight: 500; color: var( --e-global-color-primary ); font-size: 14px; }
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-submenu, .uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-target{ color: var( --e-global-color-primary ); font-size: 14px; font-weight: 600; }
+.uber-shortcode .ubermenu-nojs.ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-tabs .ubermenu-tab:hover > .uber-shortcode .ubermenu-target, .uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-tab.ubermenu-active > .ubermenu-target, .uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-current-menu-item > .ubermenu-target {background: #fff; color: var( --e-global-color-accent ); }
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-item-level-0.ubermenu-current-menu-item > .ubermenu-target, .uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-item-level-0.ubermenu-current-menu-ancestor > .ubermenu-target { background: transparent; color: var( --e-global-color-accent );  }
+.uber-shortcode .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-item-header > .ubermenu-target:hover {color: var( --e-global-color-accent ); }
+.ubermenu-skin-black-white-2.ubermenu-responsive-toggle{ background-color: var( --e-global-color-primary )!important; }
+button.ubermenu-responsive-toggle-align-full{ max-width: 100px; margin-left: auto;}
+
+.ehf-header #masthead{ position: absolute; width: 100%; }
+.site-content {padding-top: 148px; }
+
+/*form*/
+div.wpforms-container-full .wpforms-form .wpforms-page-indicator.progress .wpforms-page-indicator-page-progress-wrap{ background-color: #fff; }
+span.wpforms-page-indicator-steps {color: #fff; }
+div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button{ font-weight: var( --e-global-typography-accent-font-weight ); background-color: var( --e-global-color-accent ); color: #fff; border: none; font-size: 15px; padding: 15px 25px 15px 25px; border-radius: 3px; }
+div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button:hover{ background-color: #fff; color: #000; }
+div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left {text-align: center; }
+.wpforms-confirmation-container-full, div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message){     background: #fff; border: 1px solid #fff; color: #000; margin-top: 24px; }
+
+/*breadcrumb*/
+.custom-breadcrumb .elementor-widget-container{ text-align: center; }
+.custom-breadcrumb span, .custom-breadcrumb a {color: #fff;}
+
+/*testimonial*/
+.elementskit-stars{ padding-left: 0px!important; }
+
+/*icon-hover-box*/
+.icon-hover-box .elementor-widget-container:hover{ background-color: var( --e-global-color-primary ); }
+.icon-hover-box .elementor-widget-container:hover .elementor-icon-box-title{ color: #fff; }
+.icon-hover-box, .icon-hover-box .elementor-widget-container{ height: 100%; }
+
+/*about page*/
+.ceo-box .elementor-widget-container{ max-width: 400px; margin: 0 auto; }
+
+/*blog page*/
+.eael-post-grid-container .eael-post-elements-readmore-btn{ display: inline-block; }
+
+/*university-box*/
+.university-box{  }
+.university-box, .university-box .elementor-widget-container{ height: 100%; }
+.university-box .infobox-content{ padding: 30px 20px; }
+
+/*service box*/
+.uc_long_content_box_holder .uc_overlay{ background-image: linear-gradient(180deg, #0A054300 70%, var( --e-global-color-primary ) 88%)!important; }
+.uc_long_content_box_holder:hover .uc_overlay{ background-color: var( --e-global-color-primary )!important; opacity: 85%!important;}
+.uc_long_content_box_holder .uc_hidden_content {padding: 0px 5px; }
+
+.elementor-widget-icon-box .elementor-icon-box-title a{ word-break: break-all; }
+.location-box .elementor-icon-box-icon {margin-top: 5px; }
+
+/*tafe-table*/
+.no-header .tafe-table .tafe-table-header{ display: none; }
+table.tafe-table td, table.tafe-table th{ word-break: inherit; }
+.tafe-table a{ color: var( --e-global-color-primary ); }
+.tafe-table a:hover{ color: var( --e-global-color-accent ); text-decoration: underline; }
+.bold-td .tafe-table-body tr td:first-child {font-weight: 600; }
+/*html table*/
+.custom-table{  }
+.custom-table .elementor-widget-container{ overflow-x: auto; }
+table{ margin: 0px; background: #fff; }
+th{ text-transform: uppercase; }
+table, td, th{ border-color: #CCCCCC; text-align: center; font-size: 15px; }
+table tbody tr:nth-of-type(odd){ background-color: var( --e-global-color-0be5d77 ); }
+table tbody tr.avia-heading-row{color: var( --e-global-color-astglobalcolor5 ); background-color: var( --e-global-color-primary ); }
+table tr td strong{ font-weight: 600; }
+
+
+/*mbbs in ukraine*/
+.logo-gallery .elementor-image-gallery .gallery-icon{ border-style: solid; border-width: 1px 1px 1px 1px; border-color: #CCCCCC;
+    padding: 10px!important; background: #fff; }
+.course-box .elementor-image-box-img{ width: 100%; padding: 33px 33px 0px; }
+
+/*mbbs in kazakhstan*/
+.four-box-sec .course-box .elementor-image-box-img{ padding: 22px 22px 0px; }
+
+/*single college page*/
+.left-icon-img-box .elementor-image-box-img{ max-width: 64px; width: 100%; }
+
+/*bogomolets-national-medical-university*/
+.gal-center{ text-align: center; }
+
+/*mbbs-in-ukraine/kharkiv-state-zooveterinary-academy*/
+.elementor-widget-image-carousel{ max-width: 1024px; margin: 0 auto; }
+
+
+/*MEDIA QUERY STARTS HERE*/
+@media only screen and (max-width: 1920px) and (min-width: 1500px){
+	/*bg-video*/
+	.bg-video .elementor-container{ min-height: 1080px!important; }
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1400px){
+	/*bg-video*/
+	.bg-video .elementor-container{ min-height: 850px!important; }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1300px){
+	/*bg-video*/
+	.bg-video .elementor-container{ min-height: 750px!important; }
+}
+
+@media only screen and (max-width: 1024px){
+	.offer-box .elementor-image-box-title {padding: 15px 8px; }
+	.ubermenu-responsive.ubermenu{ margin: 0; position: absolute; left: 0; top: 100%; background: #fff; box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); }
+	.uber-shortcode .ubermenu-skin-black-white-2.ubermenu-horizontal .ubermenu-item-level-0.ubermenu-active > .ubermenu-submenu-drop {
+    margin-top: 0; }
+    .course-box .elementor-image-box-img, .four-box-sec .course-box .elementor-image-box-img{width: 100%; padding: 20px 20px 0px; }
+
+}
+
+@media only screen and (max-width: 767px){
+	.site-content {padding-top: 184px; }
+	.offer-box .elementor-widget-container{ max-width: 500px; margin: 0 auto; }
+	.country-box .elementor-widget-container{ max-width: 400px; margin: 0 auto; }
+	.icon-hover-box .elementor-icon-box-title br{ display: none; }
+	.university-box .elementor-widget-container{ max-width: 600px; margin: 0 auto; }
+	.location-box .elementor-icon-box-icon {margin-top: 0; }
+	.quick-contact-form-col .elementor-widget-wrap{ margin: 0px!important; }
+	.left-icon-img-box .elementor-image-box-img{ padding-bottom: 10px; }
+}
+
+@media only screen and (max-width: 600px){
+	td, th{ padding: 8px 5px; }
+	table, td, th{ font-size: 13px; line-height: 22px; }
+	#wpfront-scroll-top-container img{width: 40px!important; height: 40px!important; }
+}

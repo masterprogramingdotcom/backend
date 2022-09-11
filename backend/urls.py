@@ -19,12 +19,12 @@ from django.conf import settings
 from django.conf.urls.static import static 
 
 
-admin.site.site_header = "Backend Header"
-admin.site.site_title = "Backend Title"
-admin.site.index_title = "Backend Index Title"
+admin.site.site_header = "ISMO Header"
+admin.site.site_title = "ISMO Title"
+admin.site.index_title = "ISMO Index Title"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',include('blog.urls')),
-    # path('home',include('blog.urls')),
-] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('',include('home.urls')),
+    path('home',include('home.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

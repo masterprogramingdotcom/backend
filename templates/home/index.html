@@ -1,0 +1,652 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+
+
+<div class="carousel slide carousel-fade " id="featured">
+  
+     
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#featured" data-slide-to="0" class="active indicator"></li>
+    <li data-target="#featured" data-slide-to="1" class="indicator"></li>
+    <li data-target="#featured" data-slide-to="2" class="indicator"></li>
+  </ol>
+  
+  <div class="carousel-inner">
+     <div class="item active">
+       <img class="carousel-image" src="{% static 'images/MainBanner_1.png' %}" alt="banner 1">
+       {% comment %} <div class="carousel-caption animated fadeInUp" id="caption1-text">
+         <span>This is the first caption</span>
+       </div>
+       <div class="carousel-caption animated fadeInUp" id="caption1-button">
+         <a class="btn btn-default text-center btn-teo-caption">Get a Quote</a>
+       </div> {% endcomment %}
+     </div>
+     <div class="item">
+       <img class="carousel-image" src="{% static 'images/MainBanner_2.png' %}" alt="banner 2">
+
+       <div class="carousel-caption animated fadeInUp" id="caption1-button">
+         {% comment %} <a class="btn btn-default text-center btn-teo-caption">Chat With Us</a> {% endcomment %}
+       </div>
+     </div>
+     <div class="item">
+       <img class="carousel-image" src="{% static 'images/MainBanner_1.png' %}" alt="banner 3">
+
+       <div class="carousel-caption animated fadeInUp" id="caption1-button">
+         {% comment %} <a class="btn btn-default text-center btn-teo-caption">Learn More</a> {% endcomment %}
+       </div>
+     </div>
+  </div><!--carousel inner-->
+  
+  <!--Previous Button-->
+  <a class="left carousel-control" href="#featured" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <!--Next Button-->
+  <a class="right carousel-control" href="#featured" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ </div>
+</div>
+
+  
+
+
+
+  <section class="banner" style="float:none !important;">
+   
+    <div class="item">
+      <div class="img-box">
+        <img src="https://medicaldialogues.in/h-upload/2021/11/26/164932-mbbs-abroad.webp" alt="BG Image" />
+        {% comment %} <video autoplay loop muted  style="width: 100%;
+        height: 0%;
+        border: 5px solid">
+          <source src="{% static 'video/bgvideo.mp4' %}" type="video/mp4">
+          <source src="{% static 'video/bgvideo.mp4' %}" type="video/ogg">
+          
+        </video> {% endcomment %}
+      </div>
+    </div>
+    
+    
+     
+      <div class="form-content"  style="margin-top: 2% !important;">
+        <div class="form-wrap" id="mobile" >
+          <h2 style="background: -webkit-linear-gradient(left,#b53e6a,#5c4c52);">ENQUIRE NOW</h2>
+          <form
+            class="wrap-data leadForm"
+            name="leadForm"
+            action="/"
+            auto="false"
+            id="leadForm"
+            method="post"
+            enctype="multipart/form-data"
+          >
+          {% csrf_token %}
+            <div class="wrap-form">
+              <ul class="form-list lead-form">
+                <li validate="required" msg="" title="">
+                  <label> <em>*</em></label
+                  ><input
+                    type="text"
+                    name="name"
+                    id="userName"
+                    class="text"
+                    placeholder="Name"
+                    required
+
+                  />
+                </li>
+                <li validate="required,email" msg="" title="">
+                  <label> <em>*</em></label
+                  ><input
+                    type="email"
+                    name="email"
+                    id="userName"
+                    class="text"
+                    placeholder="Email"
+                    required
+                  />
+                </li>
+                <li
+                  class=""
+                  validate="required,number,minlen:10,maxlen:10"
+                  msg=""
+                  title=""
+                >
+                  <label> <em>*</em></label
+                  ><input
+                    type="number"
+                    name="number"
+                    id="userName"
+                    class="text"
+                    placeholder="number"
+                    required
+                  />
+                </li>
+                <li validate="required" msg="" title="">
+                  <label> <em>*</em></label
+                  ><input
+                    type="text"
+                    name="city"
+                    id="userName"
+                    class="text"
+                    placeholder="city"
+                    required
+                  />
+                </li>
+                <li class="text" validate="required" msg="" title="">
+                  <label> <em>*</em></label>
+                  <div class="select-box">
+                    <select
+                    required
+                      name="program"
+                      id="programTypeTitle"
+                      title=""
+                      xtype="select"
+                    >
+                      <option value="" disabled selected>Select Program Type</option>
+                      <option value="149">MBBS in POLAND</option>
+                      <option value="150">MBBS in SERBIA</option>
+                      <option value="151">MBBS in ROMANIA</option>
+                      <option value="152">MBBS in GEORGIA</option>
+                      <option value="153">MBBS in CROATIA</option>
+                      <option value="12">MBBS in RUSSIA</option>
+                      <option value="11">MBBS in USA</option>
+                      <option value="15">MBBS in BELARUS</option>
+                      <option value="111">MBBS in KAZAKHSTAN</option>
+                      <option value="16">MBBS in CHINA</option>
+                      <option value="43">MBBS In GERMANY</option>
+                    </select>
+                  </div>
+                </li>
+                
+               
+               <li>
+                <input type="submit" value="Submit"
+                 
+                  class="fa-save button"
+                 
+                />
+            
+              </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+
+  </section>
+
+    
+
+    <!-- About uS -->
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-efb678d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="efb678d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+      <div style="width:96% !important;"  class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e2ccca4" data-id="e2ccca4" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-element-b78d715 elementor-widget elementor-widget-heading" data-id="b78d715" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">About ISMO
+</h2>		</div>
+  </div>
+  <div class="elementor-element elementor-element-58b644a elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="58b644a" data-element_type="widget" data-widget_type="divider.default">
+  <div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-divider{--divider-border-style:none;--divider-border-width:1px;--divider-color:#2c2c2c;--divider-icon-size:20px;--divider-element-spacing:10px;--divider-pattern-height:24px;--divider-pattern-size:20px;--divider-pattern-url:none;--divider-pattern-repeat:repeat-x}.elementor-widget-divider .elementor-divider{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-divider .elementor-divider__text{font-size:15px;line-height:1;max-width:95%}.elementor-widget-divider .elementor-divider__element{margin:0 var(--divider-element-spacing);-ms-flex-negative:0;flex-shrink:0}.elementor-widget-divider .elementor-icon{font-size:var(--divider-icon-size)}.elementor-widget-divider .elementor-divider-separator{display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;direction:ltr}.elementor-widget-divider--view-line_icon .elementor-divider-separator,.elementor-widget-divider--view-line_text .elementor-divider-separator{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,.elementor-widget-divider--view-line_text .elementor-divider-separator:after,.elementor-widget-divider--view-line_text .elementor-divider-separator:before{display:block;content:"";border-bottom:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;-ms-flex-negative:100;flex-shrink:100}.elementor-widget-divider--element-align-left .elementor-divider-separator:before{content:none}.elementor-widget-divider--element-align-left .elementor-divider__element{margin-left:0}.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;-ms-flex-negative:100;flex-shrink:100}.elementor-widget-divider--element-align-right .elementor-divider-separator:after{content:none}.elementor-widget-divider--element-align-right .elementor-divider__element{margin-right:0}.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator{border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--separator-type-pattern{--divider-border-style:none}.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator{width:100%;min-height:var(--divider-pattern-height);-webkit-mask-size:var(--divider-pattern-size) 100%;mask-size:var(--divider-pattern-size) 100%;-webkit-mask-repeat:var(--divider-pattern-repeat);mask-repeat:var(--divider-pattern-repeat);background-color:var(--divider-color);-webkit-mask-image:var(--divider-pattern-url);mask-image:var(--divider-pattern-url)}.elementor-widget-divider--no-spacing{--divider-pattern-size:auto}.elementor-widget-divider--bg-round{--divider-pattern-repeat:round}.rtl .elementor-widget-divider .elementor-divider__text{direction:rtl}</style>		<div class="elementor-divider">
+<span class="elementor-divider-separator">
+      </span>
+</div>
+  </div>
+  </div>
+  <div class="elementor-element elementor-element-2bdf0d4 elementor-widget elementor-widget-text-editor" data-id="2bdf0d4" data-element_type="widget" data-widget_type="text-editor.default">
+  <div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				
+
+<p style="text-align: justify;">ISMO Educational consultant is one of the fast growing consultancy with dynamic management which aim to provide medical education for students who has an aspiration to become a doctor. We provide best support in various stages of foreign education process and provide a safe Indian environment with all aminities required to study and learn that helps aspirants to excel in their career. We help you get budget-friendly universities based on your profile. Individual attention to each aspi rant through our 1:1 sessions. This support is provided throughout the whole process.
+  
+  
+  <br>
+  ISM Edutech was created in 2010 with the goal of scaling
+
+up excellent healthcare services and attaining greater heights in the future. It is the leading company providing international medical education services. It has come a long way in the last 12 years and has made a significant contribution. Begun with a few students, this company has sent over 9,000 students to the world's greatest med ical universities in Tajikistan, Kyrgyzstan, Kazakhstan Georgia and Barbados.
+  </p>						</div>
+  </div>
+  <div class="elementor-element elementor-element-60ea404 elementor-widget elementor-widget-button" data-id="60ea404" data-element_type="widget" data-widget_type="button.default">
+  <div class="elementor-widget-container">
+    <div class="elementor-button-wrapper">
+<a href="/about" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+      <span class="elementor-button-content-wrapper">
+      <span class="elementor-button-text">Read More</span>
+</span>
+    </a>
+</div>
+  </div>
+  </div>
+    </div>
+</div>
+  <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bf36516" data-id="bf36516" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-element-1a306b5 elementor-widget elementor-widget-image" data-id="1a306b5" data-element_type="widget" data-widget_type="image.default">
+  <div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>												<img width="403" height="619" src="{% static 'images/about.png' %}" class="attachment-full size-full" alt="" loading="lazy" srcset="{% static 'images/about.png' %} 403w, https://www.eduvantilimited.com/wp-content/uploads/2022/03/right-image-671x1030-removebg-preview-195x300.png 195w" sizes="(max-width: 403px) 100vw, 403px">															</div>
+  </div>
+    </div>
+</div>
+        </div>
+</section>
+
+<section style="text-align:center;" class="elementor-section elementor-top-section elementor-element elementor-element-6e72587 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6e72587" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-16e543b" data-id="16e543b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-dd38c58 elementor-widget elementor-widget-heading" data-id="dd38c58" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Our Services</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c78300b elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="c78300b" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-ca87fb5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ca87fb5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-e3d1797" data-id="e3d1797" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-5997bb2 offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="5997bb2" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}</style><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/CareerGuid_1.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Free Career Guidelines</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-f43f76b" data-id="f43f76b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ed85394 offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="ed85394" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/AdmissionProcess_1.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Admission Process</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7db03ed" data-id="7db03ed" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-cac193b offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="cac193b" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/Accommodation_1.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Accommodation</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-c24067d" data-id="c24067d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-238a878 offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="238a878" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/TravelAssistance_1.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Travel Assistance</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-01eead6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="01eead6" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-baa7321" data-id="baa7321" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-94a1565 offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="94a1565" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/Recommendation_3.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Recommendation</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6dd6568" data-id="6dd6568" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-9ae1bec offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="9ae1bec" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/EducationCounselling_2.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Education Counselling </a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-f0887c0" data-id="f0887c0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-fe85a52 offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="fe85a52" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/Safety_2.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Safety</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-23af105" data-id="23af105" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-9a8d9e8 offer-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="9a8d9e8" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="500" height="500" src="{% static 'images/services/FinancialEstimation_2.png' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a style="font-size: 21px;" href="/">Financial Estimation</a></h3></div></div>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+
+<!-- country -->
+<section style="background-color: #98cdf6 !important;" class="elementor-section elementor-top-section elementor-element elementor-element-ae17814 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ae17814" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+  <div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-29c3dc4" data-id="29c3dc4" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-dfd1d82 elementor-widget elementor-widget-heading" data-id="dfd1d82" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 style="text-align: center;" class="elementor-heading-title elementor-size-default">Top Colleges To Choose From</h2>		</div>
+</div>
+<div class="elementor-element elementor-element-1743be0 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="1743be0" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+  </span>
+</div>
+</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-29fad45 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="29fad45" data-element_type="section">
+  <div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1428cf1" data-id="1428cf1" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-45d8e66 country-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="45d8e66" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/kyrgyzstan/"><img width="400" height="400" style="height: 213px;" src="{% static 'images/country/kyrgyzstan.jpeg' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"></h3></div></div>		</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-6411bfb" data-id="6411bfb" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-93cfcff country-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="93cfcff" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/kazakhstan/"><img width="400" height="400" style="height: 213px;" src="{% static 'images/country/Kazakhstan.jpeg' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"></h3></div></div>		</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-15fbae6" data-id="15fbae6" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-eb2bf48 country-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="eb2bf48" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/barbados/"><img width="400" height="400" style="height: 213px;" src="{% static 'images/country/Barbados.jpeg' %}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"></h3></div></div>		</div>
+</div>
+</div>
+</div>
+<!-- <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-ad59106" data-id="ad59106" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-93a21fc country-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="93a21fc" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="400" height="400" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Kazakhstan.jpg" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"></h3></div></div>		</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-8fe5056" data-id="8fe5056" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-b40bfca country-box elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="b40bfca" data-element_type="widget" data-widget_type="image-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/"><img width="400" height="400" src="https://www.eduvantilimited.com/wp-content/uploads/2022/05/US.jpg" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"></h3></div></div>		</div>
+</div>
+</div>
+</div> -->
+    </div>
+</section>
+
+ 
+</div>
+</div>
+    </div>
+</section>
+
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-52e79a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="52e79a5" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+  <div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a3ec3e0" data-id="a3ec3e0" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-6425ad2 elementor-widget elementor-widget-heading" data-id="6425ad2" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Testimonials</h2>		</div>
+</div>
+<div class="elementor-element elementor-element-9c8bbeb elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="9c8bbeb" data-element_type="widget" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+  </span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-473ab4a elementor-widget elementor-widget-elementskit-testimonial" data-id="473ab4a" data-element_type="widget" data-widget_type="elementskit-testimonial.default">
+<div class="elementor-widget-container">
+<div class="ekit-wid-con"><div class="elementskit-testimonial-slider ekit_testimonial_style_6 slick-slider arrow_inside slick-dotted" data-config="{&quot;rtl&quot;:false,&quot;arrows&quot;:false,&quot;dots&quot;:true,&quot;pauseOnHover&quot;:true,&quot;autoplay&quot;:true,&quot;speed&quot;:1000,&quot;slidesPerGroup&quot;:1,&quot;slidesPerView&quot;:3,&quot;loop&quot;:false,&quot;breakpoints&quot;:{&quot;320&quot;:{&quot;slidesPerView&quot;:1,&quot;slidesPerGroup&quot;:1},&quot;768&quot;:{&quot;slidesPerView&quot;:2,&quot;slidesPerGroup&quot;:1},&quot;1024&quot;:{&quot;slidesPerView&quot;:3,&quot;slidesPerGroup&quot;:1}}}">
+<div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+<div class="slick-list swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+    <div class="swiper-slide swiper-slide-active" style="width: 386.667px;">
+<div class="slick-slide">
+  <div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-b691b63">
+                  <div class="elementskit-watermark-icon elementskit-icon-content  commentor-badge ">
+      <i aria-hidden="true" class="icon icon-quote"></i>							</div>
+                                <div class="elementskit-commentor-bio ">
+      <div class="elementkit-commentor-details">
+          <div class="elementskit-commentor-image ekit-testimonial--avatar">
+            <img width="100" height="100" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Selene-Cherian-100x100-1.jpg" class="attachment-full size-full" alt="" loading="lazy">										</div>
+      </div>
+    </div>
+    
+                    <div class="elementskit-profile-info">
+                          <strong class="elementskit-author-name">SELEN CHERIAN</strong>
+                                            <span class="elementskit-author-des">Kazan Federal University</span>
+                        </div>
+    
+                    <div class="elementskit-commentor-content">
+                          <ul class="elementskit-stars">
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                            </ul>
+                          <p>Thank you for the tireless effort each of you have put into making this a reality. Many thanks to all the staff of Global Opportunities, especially to Sharon Ma’am &amp; Aiman Ma’am for always patiently answering my queries. </p>
+      </div>
+                </div>
+</div>
+</div>
+    <div class="swiper-slide swiper-slide-next" style="width: 386.667px;">
+<div class="slick-slide">
+  <div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-35665e9">
+                  <div class="elementskit-watermark-icon elementskit-icon-content  commentor-badge ">
+      <i aria-hidden="true" class="icon icon-quote"></i>							</div>
+                                <div class="elementskit-commentor-bio ">
+      <div class="elementkit-commentor-details">
+          <div class="elementskit-commentor-image ekit-testimonial--avatar">
+            <img width="100" height="100" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Shyamlee-Anbalagan-100x100-1.jpg" class="attachment-full size-full" alt="" loading="lazy">										</div>
+      </div>
+    </div>
+    
+                    <div class="elementskit-profile-info">
+                          <strong class="elementskit-author-name">SHYAMLEE ANBALAGAN</strong>
+                                            <span class="elementskit-author-des">Bashkir State Medical University</span>
+                        </div>
+    
+                    <div class="elementskit-commentor-content">
+                          <ul class="elementskit-stars">
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                            </ul>
+                          <p>It is my pleasure to write about how much you have put in your heart and soul to help me out with my visa process and also have guided me in each and every step after my Aip release, thanks a ton for your timely help and valuable guidance with…</p>
+      </div>
+                </div>
+</div>
+</div>
+    <div class="swiper-slide" style="width: 386.667px;">
+<div class="slick-slide">
+  <div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-36d4f9e">
+                  <div class="elementskit-watermark-icon elementskit-icon-content  commentor-badge ">
+      <i aria-hidden="true" class="icon icon-quote"></i>							</div>
+                                <div class="elementskit-commentor-bio ">
+      <div class="elementkit-commentor-details">
+          <div class="elementskit-commentor-image ekit-testimonial--avatar">
+            <img width="100" height="100" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Selene-Cherian-100x100-1.jpg" class="attachment-full size-full" alt="" loading="lazy">										</div>
+      </div>
+    </div>
+    
+                    <div class="elementskit-profile-info">
+                          <strong class="elementskit-author-name">SELEN CHERIAN</strong>
+                                            <span class="elementskit-author-des">Petrozavodsk State Medical University</span>
+                        </div>
+    
+                    <div class="elementskit-commentor-content">
+                          <ul class="elementskit-stars">
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                            </ul>
+                          <p>Thank you for the tireless effort each of you have put into making this a reality. Many thanks to all the staff of Global Opportunities, especially to Sharon Ma’am &amp; Aiman Ma’am for always patiently answering my queries. </p>
+      </div>
+                </div>
+</div>
+</div>
+    <div class="swiper-slide" style="width: 386.667px;">
+<div class="slick-slide">
+  <div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-f439231">
+                  <div class="elementskit-watermark-icon elementskit-icon-content  commentor-badge ">
+      <i aria-hidden="true" class="icon icon-quote"></i>							</div>
+                                <div class="elementskit-commentor-bio ">
+      <div class="elementkit-commentor-details">
+          <div class="elementskit-commentor-image ekit-testimonial--avatar">
+            <img width="100" height="100" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Shyamlee-Anbalagan-100x100-1.jpg" class="attachment-full size-full" alt="" loading="lazy">										</div>
+      </div>
+    </div>
+    
+                    <div class="elementskit-profile-info">
+                          <strong class="elementskit-author-name">SHYAMLEE ANBALAGAN</strong>
+                                            <span class="elementskit-author-des">Tbilisi State Medical University</span>
+                        </div>
+    
+                    <div class="elementskit-commentor-content">
+                          <ul class="elementskit-stars">
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                            </ul>
+                          <p>It is my pleasure to write about how much you have put in your heart and soul to help me out with my visa process and also have guided me in each and every step after my Aip release, thanks a ton for your timely help and valuable guidance with…</p>
+      </div>
+                </div>
+</div>
+</div>
+    <div class="swiper-slide" style="width: 386.667px;">
+<div class="slick-slide">
+  <div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-b4dc110">
+                  <div class="elementskit-watermark-icon elementskit-icon-content  commentor-badge ">
+      <i aria-hidden="true" class="icon icon-quote"></i>							</div>
+                                <div class="elementskit-commentor-bio ">
+      <div class="elementkit-commentor-details">
+          <div class="elementskit-commentor-image ekit-testimonial--avatar">
+            <img width="100" height="100" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Selene-Cherian-100x100-1.jpg" class="attachment-full size-full" alt="" loading="lazy">										</div>
+      </div>
+    </div>
+    
+                    <div class="elementskit-profile-info">
+                          <strong class="elementskit-author-name">SELEN CHERIAN</strong>
+                                            <span class="elementskit-author-des">European University</span>
+                        </div>
+    
+                    <div class="elementskit-commentor-content">
+                          <ul class="elementskit-stars">
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                            </ul>
+                          <p>Thank you for the tireless effort each of you have put into making this a reality. Many thanks to all the staff of Global Opportunities, especially to Sharon Ma’am &amp; Aiman Ma’am for always patiently answering my queries. </p>
+      </div>
+                </div>
+</div>
+</div>
+    <div class="swiper-slide" style="width: 386.667px;">
+<div class="slick-slide">
+  <div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-31edbdd">
+                  <div class="elementskit-watermark-icon elementskit-icon-content  commentor-badge ">
+      <i aria-hidden="true" class="icon icon-quote"></i>							</div>
+                                <div class="elementskit-commentor-bio ">
+      <div class="elementkit-commentor-details">
+          <div class="elementskit-commentor-image ekit-testimonial--avatar">
+            <img width="100" height="100" src="https://www.eduvantilimited.com/wp-content/uploads/2022/03/Shyamlee-Anbalagan-100x100-1.jpg" class="attachment-full size-full" alt="" loading="lazy">										</div>
+      </div>
+    </div>
+    
+                    <div class="elementskit-profile-info">
+                          <strong class="elementskit-author-name">SHYAMLEE ANBALAGAN</strong>
+                                            <span class="elementskit-author-des">Danylo Halytsky Lviv National Medical University</span>
+                        </div>
+    
+                    <div class="elementskit-commentor-content">
+                          <ul class="elementskit-stars">
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                              <li><a><i class="eicon-star active"></i></a></li>
+
+                            </ul>
+                          <p>It is my pleasure to write about how much you have put in your heart and soul to help me out with my visa process and also have guided me in each and every step after my Aip release, thanks a ton for your timely help and valuable guidance with…</p>
+      </div>
+                </div>
+</div>
+</div>
+</div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+<ul class="slick-dots swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-custom"><li role="presentation" class=" swiper-pagination-bullet-active slick-active"><button type="button" role="tab" tabindex="0" aria-selected="true" class="">1</button></li><li role="presentation" class="swiper-pagination-bullet"><button type="button" role="tab" tabindex="0" aria-selected="true" class="">2</button></li><li role="presentation" class="swiper-pagination-bullet"><button type="button" role="tab" tabindex="0" aria-selected="true" class="">3</button></li><li role="presentation" class="swiper-pagination-bullet"><button type="button" role="tab" tabindex="0" aria-selected="true" class="">4</button></li></ul>
+</div>
+</div>		</div>
+</div>
+</div>
+</div>
+    </div>
+</section>   
+   
+
+
+{% endblock body %}
